@@ -3,6 +3,8 @@
 #include <string.h>
 #include <stdarg.h>
 
+#ifndef _PRINT_
+#define _PRINT_
 void refresh_print(const char *format, ...);
 
 void refresh_print(const char *format, ...) {
@@ -22,3 +24,5 @@ void refresh_print(const char *format, ...) {
     // Optionally, flush the output to ensure it appears immediately
     fflush(stdout);
 }
+
+#endif
